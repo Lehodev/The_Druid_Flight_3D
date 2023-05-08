@@ -25,7 +25,7 @@ public class SpawnObstacles : MonoBehaviour
 
     void SpawnObstacle()
     {
-        float spawnY = Random.Range(-spawnRange, spawnRange);
+        float spawnY = Random.Range((spawnRange)/2, spawnRange);
         Vector3 spawnPos = new Vector3(transform.position.x, spawnY, transform.position.z);
         GameObject newObstacle = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
         newObstacle.GetComponent<Obstacles>().speed = obstacleSpeed;

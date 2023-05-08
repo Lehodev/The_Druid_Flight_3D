@@ -9,7 +9,7 @@ public class BirdMovement : MonoBehaviour
 
     private Rigidbody birdRb;
     private bool isDead = false;
-    private int score = 0;
+    private int point = 0;
 
     void Start()
     {
@@ -25,6 +25,10 @@ public class BirdMovement : MonoBehaviour
                 Jump();
             }
         }
+        else
+        {
+            Time.timeScale = 0;
+        }
     }
 
     void Jump()
@@ -38,16 +42,16 @@ public class BirdMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             isDead = true;
-            GameControlling.instance.BirdDied();
+            GameControlling.controller.BirdDied();
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("ScoreZone"))
+        if (other.gameObject.CompareTag("Point"))
         {
-            score++;
-            GameControlling.instance.UpdateScore(score);
+            point++;
+            GameControlling.controller.UpdatePoint(point);
         }
     }
 }

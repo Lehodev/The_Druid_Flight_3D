@@ -6,21 +6,21 @@ using TMPro;
 public class GameControlling : MonoBehaviour
 {
 
-    public static GameControlling instance;
+    public static GameControlling controller;
 
-    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI pointText;
     public GameObject gameOverText;
 
-    private int score = 0;
+    private int point = 0;
     private bool gameOver = false;
 
     void Awake()
     {
-        if (instance == null)
+        if (controller == null)
         {
-            instance = this;
+            controller = this;
         }
-        else if (instance != this)
+        else if (controller != this)
         {
             Destroy(gameObject);
         }
@@ -31,10 +31,10 @@ public class GameControlling : MonoBehaviour
 
     }
 
-    public void UpdateScore(int newScore)
+    public void UpdatePoint(int newPoint)
     {
-        score = newScore;
-        scoreText.text = "Score: " + score.ToString();
+        point = newPoint;
+        pointText.text = "Point: " + point.ToString();
     }
 
     public void BirdDied()
