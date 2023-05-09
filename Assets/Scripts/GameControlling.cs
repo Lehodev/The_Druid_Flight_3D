@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameControlling : MonoBehaviour
 {
@@ -41,5 +42,10 @@ public class GameControlling : MonoBehaviour
     {
         gameOverText.SetActive(true);
         gameOver = true;
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 }
