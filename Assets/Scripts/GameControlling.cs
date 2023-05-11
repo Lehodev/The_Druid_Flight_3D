@@ -27,11 +27,6 @@ public class GameControlling : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-
-    }
-
     public void UpdatePoint(int newPoint)
     {
         point = newPoint;
@@ -47,5 +42,11 @@ public class GameControlling : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }

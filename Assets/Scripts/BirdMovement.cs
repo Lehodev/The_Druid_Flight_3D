@@ -9,13 +9,11 @@ public class BirdMovement : MonoBehaviour
 
     private Rigidbody birdRb;
     private bool isDead = false;
-    private Animator birdAnim;
     private int point = 0;
 
     void Start()
     {
         birdRb = GetComponent<Rigidbody>();
-        birdAnim = GetComponent<Animator>();
         birdRb.velocity = Vector3.zero;
     }
 
@@ -38,7 +36,6 @@ public class BirdMovement : MonoBehaviour
     {
         birdRb.velocity = Vector3.zero;
         birdRb.AddForce(new Vector3(0, jumpStrength, 0));
-        birdAnim.Play("Fly");
     }
 
     void OnCollisionEnter(Collision other)
