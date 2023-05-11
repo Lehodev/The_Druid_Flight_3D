@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class SpawnObstacles : MonoBehaviour
+public class SpawnObstaclesAddressables : MonoBehaviour
 {
 
-    public GameObject obstaclePrefab;
+    public AssetReference obstaclePrefabReference;
     public float spawnInterval = 2f;
     public float spawnRange = 2f;
     public float obstacleSpeed = 2f;
@@ -23,11 +25,17 @@ public class SpawnObstacles : MonoBehaviour
         }
     }
 
-    void SpawnObstacle()
+    private async void SpawnObstacle()
     {
-        float spawnY = Random.Range(spawnRange, spawnRange*2);
+        float spawnY = Random.Range(spawnRange, spawnRange * 2);
         Vector3 spawnPos = new Vector3(transform.position.x, spawnY, transform.position.z);
-        GameObject newObstacle = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
+
+        AsyncOperationHandle<GameObject> obstacleLoadHandle = obstaclePrefabReference.InstantiateAsync(spawnPos, Quaternion.identity, null);
+
+        await obstacleLoadHandle.Task;
+
+        GameObject newObstacle = obstacleLoadHandle.Result;
+
         newObstacle.GetComponent<Obstacles>().speed = obstacleSpeed;
         Destroy(newObstacle, obstacleDestroyTime);
     }

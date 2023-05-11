@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 388298179}
-  - component: {fileID: 388298178}
+  - component: {fileID: 388298180}
   m_Layer: 0
   m_Name: ObstacleSpawner
   m_TagString: Untagged
@@ -208,23 +208,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &388298178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388298177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11459c5ab513770479bf8275c43eebff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 5111698351091030939, guid: 5aee30891fbfcc54683058f12d34a81d, type: 3}
-  spawnInterval: 3
-  spawnRange: 5
-  obstacleSpeed: 2
-  obstacleDestroyTime: 10
 --- !u!4 &388298179
 Transform:
   m_ObjectHideFlags: 0
@@ -233,13 +216,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388298177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.3, z: 5}
+  m_LocalPosition: {x: 0, y: 8.59, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388298180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388298177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67fa8b9e4af8e648806504d783266cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabReference:
+    m_AssetGUID: 5aee30891fbfcc54683058f12d34a81d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  spawnInterval: 3
+  spawnRange: 5
+  obstacleSpeed: 2
+  obstacleDestroyTime: 10
 --- !u!1001 &516900403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1433,7 +1437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329893834953536656, guid: 5aee30891fbfcc54683058f12d34a81d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.98
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7329893834953536656, guid: 5aee30891fbfcc54683058f12d34a81d, type: 3}
       propertyPath: m_LocalRotation.w
