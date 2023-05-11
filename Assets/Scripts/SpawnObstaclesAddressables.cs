@@ -28,9 +28,9 @@ public class SpawnObstaclesAddressables : MonoBehaviour
     private async void SpawnObstacle()
     {
         float spawnY = Random.Range(spawnRange, spawnRange * 2);
-        Vector3 spawnPos = new Vector3(transform.position.x, spawnY, transform.position.z);
+        Vector3 spawnPosition = new Vector3(transform.position.x, spawnY, transform.position.z);
 
-        AsyncOperationHandle<GameObject> obstacleLoadHandle = obstaclePrefabReference.InstantiateAsync(spawnPos, Quaternion.identity, null);
+        AsyncOperationHandle<GameObject> obstacleLoadHandle = obstaclePrefabReference.InstantiateAsync(spawnPosition, Quaternion.identity, null);
 
         await obstacleLoadHandle.Task;
 

@@ -5,8 +5,16 @@ using UnityEngine;
 public class StopStartMusic : MonoBehaviour
 {
 
-    [SerializeField] AudioSource music;
+    [SerializeField] public AudioSource music;
+    public static StopStartMusic controller;
     bool musicPlaying;
+    public GameObject holder;
+
+
+    public void Start()
+    {
+        DontDestroyOnLoad(holder);
+    }
 
     public void Music()
     {
@@ -14,13 +22,16 @@ public class StopStartMusic : MonoBehaviour
         {
             music.Stop();
             musicPlaying = false;
-            DontDestroyOnLoad(music);
         }
         else
         {
             music.Play();
             musicPlaying = true;
-            DontDestroyOnLoad(music);
         }
+    }
+
+    public void DestroyOnRetry()
+    {
+        Destroy(holder);
     }
 }

@@ -26,9 +26,9 @@ public class SpawnMapAddressables : MonoBehaviour
 
     private async void SpawnMap()
     {
-        Vector3 spawnPos = new Vector3(0, 10, 2);
+        Vector3 spawnPosition = new Vector3(0, 10, 2);
 
-        AsyncOperationHandle<GameObject> mapLoadHandle = mapPrefabReference.InstantiateAsync(spawnPos, Quaternion.identity, null);
+        AsyncOperationHandle<GameObject> mapLoadHandle = mapPrefabReference.InstantiateAsync(spawnPosition, Quaternion.identity, null);
 
         await mapLoadHandle.Task;
 

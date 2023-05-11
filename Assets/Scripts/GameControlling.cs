@@ -10,10 +10,10 @@ public class GameControlling : MonoBehaviour
     public static GameControlling controller;
 
     public TextMeshProUGUI pointText;
-    public GameObject gameOverText;
+    public GameObject gameOverObject;
+    private bool gameOver = false;
 
     private int point = 0;
-    private bool gameOver = false;
 
     void Awake()
     {
@@ -35,13 +35,14 @@ public class GameControlling : MonoBehaviour
 
     public void BirdDied()
     {
-        gameOverText.SetActive(true);
+        gameOverObject.SetActive(true); 
         gameOver = true;
     }
 
     public void LoadGame()
     {
         SceneManager.LoadScene("GameScene");
+        Time.timeScale = 1;
     }
 
     public void Retry()

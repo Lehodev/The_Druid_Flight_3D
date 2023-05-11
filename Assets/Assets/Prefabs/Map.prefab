@@ -201,6 +201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_03 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
 --- !u!4 &2205631296213816819 stripped
@@ -278,6 +282,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
@@ -357,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
 --- !u!4 &5271207209145593233 stripped
@@ -435,6 +447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_03
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d60e53e22127e2478b1b4988bcdc070, type: 3}
 --- !u!4 &5895732009958367344 stripped
@@ -512,6 +528,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 36a439b59f4d83346afd51e75a55b781, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_07 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36a439b59f4d83346afd51e75a55b781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a439b59f4d83346afd51e75a55b781, type: 3}

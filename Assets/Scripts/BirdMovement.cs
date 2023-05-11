@@ -26,10 +26,6 @@ public class BirdMovement : MonoBehaviour
                 Jump();
             }
         }
-        else
-        {
-            Time.timeScale = 0;
-        }
     }
 
     void Jump()
@@ -44,6 +40,7 @@ public class BirdMovement : MonoBehaviour
         {
             isDead = true;
             GameControlling.controller.BirdDied();
+            Time.timeScale = 0;
         }
     }
 

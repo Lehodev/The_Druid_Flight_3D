@@ -1364,7 +1364,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   spawnInterval: 5
   mapSpeed: 2
-  mapDestroyTime: 10
+  mapDestroyTime: 13
 --- !u!1 &1370544065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointText: {fileID: 747011491}
-  gameOverText: {fileID: 840562954}
+  gameOverObject: {fileID: 840562954}
 --- !u!4 &1407348411
 Transform:
   m_ObjectHideFlags: 0
